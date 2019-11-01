@@ -1,0 +1,12 @@
+﻿@model Assignment2.Models.Recipe
+
+<h2>Leave a review for: <span>@Model.Title</span></h2>
+<form asp-action="LeaveReview" asp-controller="Recipe" method="Post">
+    <div class="w3-panel">
+        <input type="hidden" name="RecipeId" value="@Model.RecipeId" />
+        <input type="hidden" name="RecipeTitle" value="@Model.Title" />
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Username" required name="Username"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Comment" required name="Comment"</p>
+    </div>
+    <button type="submit" class="w3-button w3-light-grey w3-section">Save</button>
+</form>
