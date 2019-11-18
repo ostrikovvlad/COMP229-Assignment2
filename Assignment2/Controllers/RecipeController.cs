@@ -12,7 +12,7 @@ namespace Assignment2.Controllers
     {
         private IRecipeRepository repository;
         private IReviewRepository reviewRepository;
-        public int PageSize = 5;
+        public int PageSize = 3;
 
         public RecipeController(IRecipeRepository repo, IReviewRepository revRepo)
         {
@@ -50,19 +50,24 @@ namespace Assignment2.Controllers
                 });
             }
         }
-
-        public ViewResult List(int recipePage = 1)
+        [HttpGet]
+        public ViewResult List(string keyword, int recipePage = 1)
         {
             ViewBag.Title = "Our Recipes";
             return View("List", new RecipeListViewModel
             {
-                Recipes = repository.Recipes.OrderBy(r => r.RecipeId).Skip((recipePage - 1) * PageSize).Take(PageSize),
+                Recipes = repository.Recipes.Where(r => (keyword == null) || (r.Title.Contains(keyword)
+                || r.Description.Contains(keyword) || r.Ingredients.Contains(keyword) || r.Instruction.Contains(keyword)))
+                .OrderBy(r => r.RecipeId).Skip((recipePage - 1) * PageSize).Take(PageSize),
                 PagingInfo = new PagingInfo
                 {
                     CurrentPage = recipePage,
                     RecipesPerPage = PageSize,
-                    TotalRecipes = repository.Recipes.Count()
-                }
+                    TotalRecipes = repository.Recipes.Where(r => (keyword == null) || (r.Title.Contains(keyword)
+                || r.Description.Contains(keyword) || r.Ingredients.Contains(keyword) || r.Instruction.Contains(keyword)))
+                .Count()
+                },
+                KeyWord = keyword
             });
         }
 

@@ -10,5 +10,6 @@ namespace Assignment2.Models.ViewModels
     {
         public IEnumerable<Recipe> Recipes { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public string KeyWord { get; set; }
     }
 }

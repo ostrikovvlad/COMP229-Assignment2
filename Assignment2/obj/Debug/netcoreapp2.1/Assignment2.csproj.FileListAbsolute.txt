@@ -136,3 +136,4 @@ C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\C
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_AdminLayout.g.cshtml.cs
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Edit.g.cshtml.cs
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Admin\AddRecipe.g.cshtml.cs
+C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_RecipeListLayout.g.cshtml.cs

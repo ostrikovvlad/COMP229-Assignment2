@@ -32,6 +32,7 @@ namespace Assignment2.Infrastructure
         public string PageClass { get; set; }
         public string PageClassNormal { get; set; }
         public string PageClassSelected { get; set; }
+        public string PageKeyword { get; set; }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
@@ -41,7 +42,7 @@ namespace Assignment2.Infrastructure
             {
                 TagBuilder tag = new TagBuilder("a");
                 tag.Attributes["href"] = urlHelper.Action(PageAction,
-                   new { recipePage = i });
+                   new { keyword = PageKeyword,recipePage = i });
 
                 if (PageClassesEnabled)
                 {

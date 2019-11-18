@@ -1,4 +1,7 @@
 ﻿@model RecipeListViewModel
+@{ 
+    Layout = "_RecipeListLayout";
+}
 
 <div class="w3-content" style="max-width:1100px">
     <div class="w3-row w3-padding-64" style="padding-bottom:16px !important;" id="menu">
@@ -11,7 +14,7 @@
         </div>
         <div>
             <div page-model="@Model.PagingInfo"
-                 page-action="List" page-classes-enabled="true"
+                 page-action="List" page-classes-enabled="true" page-keyword="@Model.KeyWord"
                  page-class="btn"
                  page-class-normal="w3-btn w3-dark-gray"
                  page-class-selected="w3-btn w3-disabled w3-light-gray w3-border-black">

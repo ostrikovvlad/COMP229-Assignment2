@@ -63,7 +63,7 @@ using Assignment2.Infrastructure;
             WriteLiteral("    <div class=\"w3-content\" style=\"max-width:1100px\">\n        <div class=\"w3-row w3-padding-64\" id=\"about\">\n            <div class=\"w3-col m6 w3-padding-large w3-hide-small\">\n                ");
             EndContext();
             BeginContext(247, 124, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "91710df36b9542c1885b6e89e61c51f7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "94cf2454fd964b7e97d1e8d2714d888b", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

@@ -59,7 +59,7 @@ using Assignment2.Infrastructure;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(27, 167, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "865b7d54dc464e21920c3fbcff23c3ec", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "29ee793ddb3044288dc69e1475e390b9", async() => {
                 BeginContext(33, 130, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <link href=\"/css/StyleSheet.css\" rel=\"stylesheet\" />\r\n    <title>");
                 EndContext();
@@ -89,7 +89,7 @@ using Assignment2.Infrastructure;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(200, 666, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f879a1e61a9487d9ff39ed1cb8dbee6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e4906a8fa714b2da07fbb685fc3131a", async() => {
                 BeginContext(206, 20, true);
                 WriteLiteral("\r\n        <header>\r\n");
                 EndContext();

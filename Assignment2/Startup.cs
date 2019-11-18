@@ -45,10 +45,15 @@ namespace Assignment2
             //app.UseMvcWithDefaultRoute();
             app.UseMvc(routes =>
             {
-            routes.MapRoute(
+                routes.MapRoute(
+                name: "search-pagination",
+                template: "Recipe/List/{keyword?}/Page{recipePage}",
+                defaults: new { Controller = "Recipe", action = "List"}
+                );
+                routes.MapRoute(
                 name: "pagination",
                 template: "Recipe/List/Page{recipePage}",
-                defaults: new { Controller = "Recipe", action = "List" }
+                defaults: new { Controller = "Recipe", action = "List", recipePage = 1 }
                 );
             routes.MapRoute(
                 name: "details",
