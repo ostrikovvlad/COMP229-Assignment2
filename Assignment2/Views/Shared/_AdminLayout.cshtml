@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/css/StyleSheet.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+    <body>
+        <header>
+            @if (TempData["message"] != null)
+            {
+                <div class="w3-light-green w3-wide w3-text-black w3-left w3-large w3-top w3-padding-24" style="color:white !important; padding-left:24px;">@TempData["message"]</div>
+            }
+            else
+            {
+                <div class="w3-light-gray w3-wide w3-text-black w3-left w3-large w3-top w3-padding-24" style="padding-left:24px;">@ViewBag.MyHeader</div>
+            }
+            
+        </header>
+        <div class="w3-content" style="max-width:1100px; margin-top: 110px !important;">
+            @RenderBody()
+        </div>
+    </body>
+</html>

@@ -56,8 +56,14 @@
             </div>
         }
     }
-    <form id="@Model.Recipe.RecipeId" asp-action="LeaveReview" asp-controller="Recipe" method="get">
-        <input hidden name="RecipeId" value="@Model.Recipe.RecipeId" />
-        <button type="submit" class="w3-button w3-light-grey w3-section">Leave Review</button>
-    </form>
+    
+            <h1>Leave Review</h1>
+            <form id="@Model.Recipe.RecipeId" asp-action="LeaveReview" asp-controller="Recipe" method="post">
+                <hr />
+                <input hidden name="RecipeId" value="@Model.Recipe.RecipeId" />
+                <input hidden name="RecipeTitle" value="@Model.Recipe.Title" />
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Username or leave empty" name="Username" /></p>
+                <p><textarea rows="5" class="w3-input w3-padding-16" placeholder="Comment" required name="Comment"></textarea></p>
+                <button type="submit" class="w3-button w3-light-grey w3-section">Post</button>
+            </form>
 </div>

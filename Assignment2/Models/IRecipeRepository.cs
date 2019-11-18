@@ -9,5 +9,7 @@ namespace Assignment2.Models
     {
         IQueryable<Recipe> Recipes { get; }
         Recipe Add(Recipe recipe);
+        void SaveRecipe(Recipe recipe);
+        Recipe DeleteRecipe(int recipeId);
     }
 }

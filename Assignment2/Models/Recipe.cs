@@ -10,7 +10,21 @@ namespace Assignment2.Models
     {
         private int recipeId;
         [Key]
-        public int RecipeId { get { return recipeId; } set { recipeId = UniqueId.GetId(); } }
+        public int RecipeId
+        {
+            get { return recipeId; }
+            set
+            {
+                if (value < 0)
+                {
+                    recipeId = UniqueId.GetId();
+                }
+                else
+                {
+                    recipeId = value;
+                }
+            }
+        }
         public string Name { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }

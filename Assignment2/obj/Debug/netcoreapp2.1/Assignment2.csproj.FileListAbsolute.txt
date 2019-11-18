@@ -115,7 +115,6 @@ C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\C
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Assignment2.TagHelpers.input.cache
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Assignment2.TagHelpers.output.cache
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Assignment2.RazorCoreGenerate.cache
-C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Recipe\AddRecipe.g.cshtml.cs
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Recipe\Index.g.cshtml.cs
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Recipe\LeaveReview.g.cshtml.cs
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Recipe\List.g.cshtml.cs
@@ -133,3 +132,7 @@ C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\C
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Assignment2.dll
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Assignment2.pdb
 C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Assignment2.csproj.CopyComplete
+C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Index.g.cshtml.cs
+C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_AdminLayout.g.cshtml.cs
+C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Edit.g.cshtml.cs
+C:\Users\ostri\OneDrive\Desktop\Folders\College\Fall 2019\COMP 229\Assignments\COMP229-Assignment2\Assignment2\obj\Debug\netcoreapp2.1\Razor\Views\Admin\AddRecipe.g.cshtml.cs

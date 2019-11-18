@@ -12,7 +12,7 @@ namespace Assignment2.Controllers
     {
         private IRecipeRepository repository;
         private IReviewRepository reviewRepository;
-        public int PageSize = 4;
+        public int PageSize = 5;
 
         public RecipeController(IRecipeRepository repo, IReviewRepository revRepo)
         {
@@ -25,27 +25,7 @@ namespace Assignment2.Controllers
             ViewBag.Title = "Tasty Recipes";
             return View("Index");
         }
-        [HttpGet]
-        public ViewResult AddRecipe()
-        {
-            ViewBag.Title = "Add Recipe";
-            return View();
-        }
-        [HttpPost]
-        public ViewResult AddRecipe(Recipe recipe, int recipePage = 1)
-        {
-            repository.Add(recipe);
-            return View("List", new RecipeListViewModel
-            {
-                Recipes = repository.Recipes.OrderBy(r => r.RecipeId).Skip((recipePage - 1) * PageSize).Take(PageSize),
-                PagingInfo = new PagingInfo
-                {
-                    CurrentPage = recipePage,
-                    RecipesPerPage = PageSize,
-                    TotalRecipes = repository.Recipes.Count()
-                }
-            });
-        }
+        
         [HttpGet]
         public ViewResult LeaveReview(int recipeId)
         {
@@ -53,16 +33,22 @@ namespace Assignment2.Controllers
             return View("LeaveReview", repository.Recipes.Where(r => r.RecipeId == recipeId).FirstOrDefault());
         }
         [HttpPost]
-        public ViewResult LeaveReview(int recipeId, string recipeTitle, string username, string comment)
+        public IActionResult LeaveReview(int recipeId, string recipeTitle, string username, string comment)
         {
-            reviewRepository.Add(new Review
-            { RecipeId = recipeId, RecipeTitle = recipeTitle, Username = username, Comment = comment });
-            RecipeDetailsViewModel rec = new RecipeDetailsViewModel
+            if (ModelState.IsValid)
             {
-                Recipe = repository.Recipes.Where(r => r.RecipeId == recipeId).FirstOrDefault(),
-                Reviews = reviewRepository.Reviews.Where(r => r.RecipeId == recipeId)
-            };
-            return View("ViewRecipe", rec); 
+                reviewRepository.Add(new Review
+                { RecipeId = recipeId, RecipeTitle = recipeTitle, Username = username, Comment = comment });
+                return RedirectToAction("ViewRecipe", new { recipeId = recipeId});
+            }
+            else
+            {
+                return View("ViewRecipe", new RecipeDetailsViewModel
+                {
+                    Recipe = repository.Recipes.Where(r => r.RecipeId == recipeId).FirstOrDefault(),
+                    Reviews = reviewRepository.Reviews.Where(r => r.RecipeId == recipeId)
+                });
+            }
         }
 
         public ViewResult List(int recipePage = 1)
@@ -87,7 +73,7 @@ namespace Assignment2.Controllers
             { Recipe = repository.Recipes.Where(r => r.RecipeId == recipeId).FirstOrDefault(),
                 Reviews = reviewRepository.Reviews.Where(r => r.RecipeId == recipeId)};
 
-            ViewBag.Title = recipe.Title;
+            ViewBag.Title = "Recipe Details";
             return View("ViewRecipe", rec);
         }
     }

@@ -41,7 +41,7 @@ namespace Assignment2.Infrastructure
             {
                 TagBuilder tag = new TagBuilder("a");
                 tag.Attributes["href"] = urlHelper.Action(PageAction,
-                   new { productPage = i });
+                   new { recipePage = i });
 
                 if (PageClassesEnabled)
                 {

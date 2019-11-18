@@ -47,18 +47,22 @@ namespace Assignment2
             {
             routes.MapRoute(
                 name: "pagination",
-                template: "Recipe/Page{productPage}",
+                template: "Recipe/List/Page{recipePage}",
                 defaults: new { Controller = "Recipe", action = "List" }
                 );
             routes.MapRoute(
                 name: "details",
-                template: "Recipe/Details/{recipeId}",
+                template: "Recipe/Details/Recipe{recipeId}",
                 defaults: new { Controller = "Recipe", action = "ViewRecipe" });
+            routes.MapRoute(
+                    name:"editing",
+                    template: "Admin/Edit/Recipe{recipeId}",
+                    defaults: new { Controller = "Admin", action = "Edit"});
             routes.MapRoute(name: "default",
                 template: "{controller=Recipe}/{action=Index}");
-            routes.MapRoute(name: "review",
-                template: "Recipe/LeaveReview/{recipeId}",
-                    defaults: new { Controller = "Recipe", action = "LeaveReview" });
+            //routes.MapRoute(name: "review",
+            //    template: "Recipe/LeaveReview/Recipe{recipeId}",
+            //        defaults: new { Controller = "Recipe", action = "LeaveReview" });
 
             }
             );

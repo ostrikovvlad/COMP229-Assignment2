@@ -24,9 +24,9 @@ namespace Assignment2.Models
             get { return username; }
             set
             {
-                if(value == "")
+                if(value == null)
                 {
-                    username = "Anonymus";
+                    username = "Anonymous";
                 }
                 else
                 {

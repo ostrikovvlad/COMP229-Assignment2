@@ -1,0 +1,25 @@
+﻿@model Recipe
+@{ 
+    ViewBag.Title = "Edit Recipe";
+    ViewBag.MyHeader = "Edit " + Model.Title;
+    Layout = "_AdminLayout";
+}
+<div class="w3-container w3-padding-64" id="contact" style="padding-top:0px !important;">
+    <h3>You are about to edit <span class="w3-tag w3-light-grey" style="padding-top:0px !important;margin-bottom:32px !important;">@Model.Title</span> recipe.</h3>
+    <form asp-action="Edit" asp-controller="Admin" method="post">
+        <input type="hidden" asp-for="RecipeId" />
+        <p><label asp-for="Title">Title: </label><input class="w3-input w3-padding-16" type="text" placeholder="Title" 
+            required name="Title" asp-for="Title"></p>
+        <p><label asp-for="Name">Author's Name: </label><input class="w3-input w3-padding-16" type="text" placeholder="Author's name" 
+            required name="Name" asp-for="Name"></p>
+        <p><label asp-for="Description">Description: </label><textarea rows="5" class="w3-input w3-padding-16" type="text" 
+            placeholder="Description" required name="Description" asp-for="Description"></textarea></p>
+        <p><label asp-for="Ingredients">Ingredients: </label><textarea rows="5" class="w3-input w3-padding-16" type="text" 
+            placeholder="Ingredients" required name="Ingredients" asp-for="Ingredients"></textarea></p>
+        <p><label asp-for="Instruction">Instructions: </label><textarea rows="5" class="w3-input w3-padding-16" type="text" 
+            placeholder="Instructions" required name="Instruction" asp-for="Instruction"></textarea></p>
+        <p><button class="w3-button w3-light-grey w3-section" type="submit">SAVE CHANGES</button> 
+            <a class="w3-button w3-light-grey w3-section" asp-action="Index" asp-controller="Admin">CANCEL</a></p>
+    </form>
+</div>
+

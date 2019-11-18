@@ -1,7 +1,7 @@
 ﻿@model RecipeListViewModel
 
 <div class="w3-content" style="max-width:1100px">
-    <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-row w3-padding-64" style="padding-bottom:16px !important;" id="menu">
         <div class="w3-col l6 w3-padding-large">
             <h1 class="w3-center">Our Menu</h1><br>
             @foreach (var r in Model.Recipes)
@@ -9,15 +9,22 @@
                 @Html.Partial("RecipeSummary", r)
             }
         </div>
-        <div page-model="@Model.PagingInfo" 
-        page-action="List" page-classes-enabled="true"
-        page-class="btn"
-        page-class-normal="w3-btn"
-        page-class-selected="w3-disabled">
-
+        <div>
+            <div page-model="@Model.PagingInfo"
+                 page-action="List" page-classes-enabled="true"
+                 page-class="btn"
+                 page-class-normal="w3-btn w3-dark-gray"
+                 page-class-selected="w3-btn w3-disabled w3-light-gray w3-border-black">
+            </div>
         </div>
         <div class="w3-col l6 w3-padding-large">
             <img src="~/images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
         </div>
+    </div>
+    <hr />
+    <div class="w3-row" style="padding-bottom:64px; padding-left:16px !important">
+        <h4>Additional Information</h4>
+        <p class="w3-text-gray">To add a new recipe, modify already existent recipe, or delete recipe click the button below </p>
+        <a class="w3-button w3-dark-gray" style="color:white !important;" asp-action="Index" asp-controller="Admin">Update</a>
     </div>
 </div>
