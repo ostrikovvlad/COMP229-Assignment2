@@ -101,7 +101,7 @@ using Assignment2.Infrastructure;
             WriteLiteral("        </div>\r\n        <div>\r\n            ");
             EndContext();
             BeginContext(488, 333, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eea64b9b964543d0943b25fa7ac40dfc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aac6a1c9555b4009ade589b8fae08345", async() => {
                 BeginContext(801, 14, true);
                 WriteLiteral("\r\n            ");
                 EndContext();
@@ -150,7 +150,7 @@ __Assignment2_Infrastructure_PageLinkTagHelper.PageClassesEnabled = true;
             WriteLiteral("\r\n        </div>\r\n        <div class=\"w3-col l6 w3-padding-large\">\r\n            ");
             EndContext();
             BeginContext(901, 108, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "39d3960af8d345beb6c7eb64757223d8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5ed0bfdfafa14deeb23b44c5ac84cbc9", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -178,7 +178,7 @@ __Assignment2_Infrastructure_PageLinkTagHelper.PageClassesEnabled = true;
         ");
             EndContext();
             BeginContext(1315, 118, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "55f3309ce7e744a4b25bb395e10c1177", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aac1ed98322f4486819c939dbdfc1479", async() => {
                 BeginContext(1423, 6, true);
                 WriteLiteral("Update");
                 EndContext();

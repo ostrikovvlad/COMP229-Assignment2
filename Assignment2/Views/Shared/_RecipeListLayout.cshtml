@@ -12,8 +12,12 @@
         <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
             <a asp-action="Index" class="w3-bar-item w3-button">Tasty Recipes</a>
             <form asp-controller="Recipe" asp-action="List" method="get">
-                <input class="w3-bar-item" type="text" id="keyword" name="keyword"  placeholder="Search by Keyword" />
-                <button type="submit" class="w3-bar-item w3-button w3-light-gray">Search</button>
+                <input class="w3-bar-item" type="text" id="keyword" name="keyword"  placeholder="Search by Keyword"
+                       autocomplete="off"/>
+                <button type="submit" class="w3-bar-item w3-button w3-light-gray">
+                    <img
+                    <img src="~/images/search_png.png" height="20" width="20"/>
+                </button>
             </form>
             <div class="w3-right w3-hide-small">
                 <a asp-action="Index" class="w3-bar-item w3-button">About</a>
