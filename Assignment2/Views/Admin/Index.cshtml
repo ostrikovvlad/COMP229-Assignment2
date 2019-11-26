@@ -1,5 +1,5 @@
-﻿@model IEnumerable<Recipe>
-@{ 
+﻿@model RecipeListViewModel
+@{
     ViewBag.Title = "All Recipes";
     ViewBag.MyHeader = "All Recipes";
     Layout = "_AdminLayout";
@@ -11,7 +11,7 @@
         <th>Author</th>
         <th>Actions</th>
     </tr>
-    @foreach(Recipe r in Model)
+    @foreach (Recipe r in Model.Recipes)
     {
         <tr>
             <td>@r.RecipeId</td>
@@ -27,4 +27,12 @@
         </tr>
     }
 </table>
-<a class="w3-btn w3-light-gray w3-margin-top" style="margin-right:16px;" asp-action="Index" asp-controller="Recipe">Back to Main</a><a class="w3-btn w3-light-green w3-margin-top" style="color:white !important;" asp-action="AddRecipe" asp-controller="Admin">Add Recipe</a>
+<div>
+    <div page-model="@Model.PagingInfo"
+         page-action="Index" page-classes-enabled="true"
+         page-class="btn"
+         page-class-normal="w3-btn w3-dark-gray"
+         page-class-selected="w3-btn w3-disabled w3-light-gray w3-border-black">
+    </div>
+</div>
+<a class="w3-btn w3-dark-gray w3-margin-top w3-text-white" style="margin-right:16px;" asp-action="Index" asp-controller="Recipe">Back to Main</a><a class="w3-btn w3-light-green w3-margin-top" style="color:white !important;" asp-action="AddRecipe" asp-controller="Admin">Add Recipe</a>

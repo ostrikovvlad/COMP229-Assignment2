@@ -4,19 +4,35 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Assignment2.Models;
+using Assignment2.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Assignment2.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IRecipeRepository repository;
+        public int PageSize = 5;
+
         public AdminController(IRecipeRepository repo)
         {
             repository = repo;
         }
-        public ViewResult Index()
+
+
+        public ViewResult Index(int recipePage = 1)
         {
-            return View("Index", repository.Recipes);
+            return View("Index", new RecipeListViewModel
+            {
+                Recipes = repository.Recipes.OrderBy(r => r.RecipeId).Skip((recipePage - 1) * PageSize).Take(PageSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = recipePage,
+                    RecipesPerPage = PageSize,
+                    TotalRecipes = repository.Recipes.Count()
+                }
+            });
         }
         public ViewResult Edit(int recipeId)
         {

@@ -12,7 +12,7 @@ namespace Assignment2.Controllers
     {
         private IRecipeRepository repository;
         private IReviewRepository reviewRepository;
-        public int PageSize = 3;
+        public int PageSize = 4;
 
         public RecipeController(IRecipeRepository repo, IReviewRepository revRepo)
         {

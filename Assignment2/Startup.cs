@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Assignment2.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Assignment2
 {
@@ -24,6 +25,11 @@ namespace Assignment2
         {
 
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:TastyRecipes:ConnectionString"]));
+            services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:TastyRecipesIdentity:ConnectionString"]));
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                    .AddEntityFrameworkStores<AppIdentityDbContext>()
+                    .AddDefaultTokenProviders();
+                ;
 
             services.AddTransient<IRecipeRepository, EFRecipeRepository>();
             services.AddTransient<IReviewRepository, EFReviewRepository>();
@@ -42,7 +48,8 @@ namespace Assignment2
 
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            //app.UseMvcWithDefaultRoute();
+            app.UseSession();
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -63,6 +70,11 @@ namespace Assignment2
                     name:"editing",
                     template: "Admin/Edit/Recipe{recipeId}",
                     defaults: new { Controller = "Admin", action = "Edit"});
+                routes.MapRoute(
+                    name: "adminIndex",
+                    template: "Admin/Index/Page{recipePage}",
+                    defaults: new {Controller = "Admin", action = "Index", recipePage = 1 }
+                    );
             routes.MapRoute(name: "default",
                 template: "{controller=Recipe}/{action=Index}");
             //routes.MapRoute(name: "review",
@@ -72,6 +84,7 @@ namespace Assignment2
             }
             );
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

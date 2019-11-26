@@ -43,7 +43,7 @@
     @if (!Model.Reviews.Any())
     {
         <div class="w3-card-4 w3-border w3-light-grey w3-margin">
-            <h3>There are no reviews</h3>
+            <h3 class="w3-padding">There are no reviews</h3>
         </div>
     }
     else
@@ -51,8 +51,8 @@
         @foreach (Review r in Model.Reviews)
         {
             <div class="w3-card-4 w3-border w3-light-grey w3-margin">
-                <h3>@r.Username</h3>
-                <p>@r.Comment</p>
+                <h3 class="w3-padding">@r.Username</h3>
+                <p class="w3-padding">@r.Comment</p>
             </div>
         }
     }

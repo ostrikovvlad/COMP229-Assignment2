@@ -1,0 +1,43 @@
+﻿@model LoginModel
+@{ 
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <div class="w3-bar w3-white w3-padding w3-card w3-top" style="letter-spacing:2px;">
+            <a class="w3-bar-item w3-button" asp-controller="Recipe" asp-action="Index">Back To Main</a>
+        </div>
+    </header>
+    <div class="w3-content w3-light-grey" style="background-color:lightgray !important">
+        <form asp-action="Login" asp-controller="Account" method="post" class="w3-display-middle w3-light-gray">
+            <input type="hidden" asp-for="ReturnUrl" />
+            <div class="w3-margin">
+                <p>
+                    <div><span asp-validation-for="Name"></span></div>
+                    <label asp-for="Name" class="w3-text-black w3-large"></label>
+                    <input asp-for="Name" class="w3-input w3-padding-16" />
+                </p>
+            </div>
+            <div class="w3-margin">
+                <p>
+                    <div><span asp-validation-for="Password"></span></div>
+                    <label asp-for="Password" class="w3-text-black w3-large w3-left"></label>
+                    <input asp-for="Password" class="w3-input w3-padding-16" />
+                </p>
+            </div>
+            <div class="w3-margin w3-center">
+                <button type="submit" class="w3-btn w3-dark-gray w3-text-white w3-center" style="align-self:center !important">Log In</button>
+            </div>
+            
+        </form>
+    </div>
+
+</body>
+</html>

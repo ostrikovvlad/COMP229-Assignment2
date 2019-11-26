@@ -9,17 +9,23 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div class="w3-top">
+    <header class="w3-top">
         <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-            <a asp-action="Index" class="w3-bar-item w3-button">Tasty Recipes</a>
+            <span class="w3-bar-item">Tasty Recipes</span>
             <div class="w3-right w3-hide-small">
                 <a asp-action="Index" class="w3-bar-item w3-button">About</a>
                 <a asp-action="List" asp-route-recipePage="1" asp-route-keyword="" class="w3-bar-item w3-button">Recipes</a>
             </div>
         </div>
-    </div>
+    </header>
     <div>
         @RenderBody()
     </div>
+    <footer>
+        <div class="w3-bar w3-white w3-border-top w3-padding-16 w3-center">
+            <span style="text-align:center!important; font-size: 14px!important">&copy; Copyright - F2019 COMP229 - Project by Group 001. All Rights Reserved</span><br />
+            <span style="text-align:center!important; font-size: 12px!important">Members: Andrey Paramonov, Nataliia Arsenieva, Vladislav Ostrikov</span>
+        </div>
+    </footer>
 </body>
 </html>
